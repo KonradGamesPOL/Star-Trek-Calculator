@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+	
+	<h1> Stats: </h1>
+	<h3 id="attack_label"> Attack power: </h1>
+	<h3 id="HP_label"> Armor units: </h1>
+	<h3 id="shield_label"> Shield power: </h1>
+	<h3 id="warp_label"> Warp charges: </h1>
+	
+	<br>
+	
+	<h1> Costs: </h1>
+	<h3 id="tritanium_label"> Tritanium: </h1>
+	<h3 id="credits_label"> Credits: </h1>
+	<h3 id="special_label"> Special materials: </h1>
+
+	<br>
+	
+	<h1> Registration: </h1>
+	<h3 id="name_label"> Name: </h1>
+	<h3 id="number_label"> ID: </h1>
+	
+<script>
+	
+	let tritanium = 0;
+	let credits = 0;
+	let special = 0;
+
+	let attack = 0;
+	let HP = 0;
+	let shield = 0;
+	
+
+	let phasers = prompt("How many phasers: ");
+	let torpedo = prompt("How many photon torpedoes: ");
+	let armor = prompt("How many armor units: ");
+	let shield_g = prompt("How many shield generators: ");
+	let warp = prompt("How many Warp charges: ");
+
+	let name = prompt("Name of the ship: ");
+	let number = prompt("ID number of the ship: ");
+	
+	
+	tritanium += 1 * phasers;
+	tritanium += 3 * torpedo;
+	tritanium += 2 * armor;
+	tritanium += 1 * shield_g;
+	tritanium += 1 * warp;
+
+	credits += 1 * phasers;
+	credits += 2 * torpedo;
+	credits += 1 * armor;
+	credits += 1 * shield_g;
+	credits += 2 * warp;
+
+	special += 2 * phasers;
+	special += 2 * torpedo;
+	special += 1 * armor;
+	special += 2 * shield_g;
+	special += 2 * warp;
+	
+	
+	attack += phasers * 1
+	attack += torpedo * 2
+
+	HP += armor * 4
+	
+	shield += shield_g * 3
+
+
+	document.getElementById("attack_label").innerText = "Attack power: " + attack;
+	document.getElementById("HP_label").innerText = "Armor units: " + HP;
+	document.getElementById("shield_label").innerText = "Shield power: " + shield;
+	document.getElementById("warp_label").innerText = "Warp charges: " + warp;
+
+	document.getElementById("tritanium_label").innerText = "Tritanium: " + tritanium;
+	document.getElementById("credits_label").innerText = "Credits: " + credits;
+	document.getElementById("special_label").innerText = "Special materials: " + special;
+
+	document.getElementById("name_label").innerText = "Name: " + name;
+	document.getElementById("number_label").innerText = "ID: NCC - " + number;
+	
+</script>
+
+
+</body>
+</html>
