@@ -3,6 +3,26 @@
 <html>
 <body>
 	
+	<h1> Data: </h1>
+	
+	<h3> How many phasers: <input id="phasers" type="number" oninput="calc()" min="1" value="1"> </h3>
+	<h3> How many photon torpedoes: <input id="torpedo" type="number" oninput="calc()" min="0" value="0"> </h3>
+	<h3> How many armor units: <input id="armor" type="number" oninput="calc()" min="1" value="1"> </h3>
+	<h3> How many shield generators: <input id="shield_g" type="number" oninput="calc()" min="1" value="1"> </h3>
+	<h3> How many warp charges: <input id="warp" type="number" oninput="calc()" min="1" value="1"> </h3>
+
+	<br>
+
+	<h3> Name of the ship: <input id="name" type="text" oninput="calc()"> </h3>
+	<h3> ID number of the ship: <input id="number" type="text" oninput="calc()"> </h3>
+	
+	
+
+	<br>
+	<br>
+	
+	
+
 	<h1> Stats: </h1>
 	<h3 id="attack_label"> Attack power: </h1>
 	<h3 id="HP_label"> Armor units: </h1>
@@ -23,7 +43,10 @@
 	<h3 id="number_label"> ID: </h1>
 	
 <script>
-	
+
+	function calc() {
+
+
 	let tritanium = 0;
 	let credits = 0;
 	let special = 0;
@@ -33,15 +56,16 @@
 	let shield = 0;
 	
 
-	let phasers = prompt("How many phasers: ");
-	let torpedo = prompt("How many photon torpedoes: ");
-	let armor = prompt("How many armor units: ");
-	let shield_g = prompt("How many shield generators: ");
-	let warp = prompt("How many Warp charges: ");
+	let phasers = document.getElementById("phasers").value;
+	let torpedo = document.getElementById("torpedo").value;
+	let armor = document.getElementById("armor").value;
+	let shield_g = document.getElementById("shield_g").value;
+	let warp = document.getElementById("warp").value;
 
-	let name = prompt("Name of the ship: ");
-	let number = prompt("ID number of the ship: ");
+	let number = document.getElementById("name").value;
+	let name = document.getElementById("number").value;
 	
+
 	
 	tritanium += 1 * phasers;
 	tritanium += 3 * torpedo;
@@ -81,6 +105,9 @@
 
 	document.getElementById("name_label").innerText = "Name: " + name;
 	document.getElementById("number_label").innerText = "ID: NCC - " + number;
+	
+
+	}
 	
 </script>
 
