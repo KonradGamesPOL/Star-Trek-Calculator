@@ -1,47 +1,150 @@
 <!DOCTYPE html>
 
 <html>
+
+
+<head>
+
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title>Star Trek Calculator</title>
+
+
+	<style>
+
+
+	body{
+
+		background-image: url("star_background.webp");
+		background-attachment: fixed;
+		color: white;
+		font-family: arial;
+	}
+	
+
+	.container{
+
+		text-align: center;
+		margin: auto;
+		pedding: 20px;
+		max-width: 900px;
+	}
+
+
+	.segments{
+
+		border-style: solid;
+		border-width: 8px;
+		border-radius: 25px;
+		border-color: rgba(84, 40, 204, 0.8);
+		background: rgba(0, 0, 0, 0.75);
+
+		width: 400px;
+		margin: auto;
+	}
+
+	.number_inputs{
+
+		border-style: solid;
+		border-width: 2px;
+		border-radius: 5px;
+		border-color: rgb(84, 40, 204);
+	
+		width: 40px;
+		margin: auto;
+	}
+
+	.text_inputs{
+
+		border-style: solid;
+		border-width: 2px;
+		border-radius: 5px;
+		border-color: rgb(84, 40, 204);
+
+		width: 150px;
+		margin: auto;
+	}
+
+	</style>
+
+
+</head>
+
+
+
 <body>
 	
-	<h1> Data: </h1>
-	
-	<h3> How many phasers: <input id="phasers" type="number" oninput="calc()" min="1" value="1"> </h3>
-	<h3> How many photon torpedoes: <input id="torpedo" type="number" oninput="calc()" min="0" value="0"> </h3>
-	<h3> How many armor units: <input id="armor" type="number" oninput="calc()" min="1" value="1"> </h3>
-	<h3> How many shield generators: <input id="shield_g" type="number" oninput="calc()" min="1" value="1"> </h3>
-	<h3> How many warp charges: <input id="warp" type="number" oninput="calc()" min="1" value="1"> </h3>
 
-	<br>
 
-	<h3> Name of the ship: <input id="name" type="text" oninput="calc()"> </h3>
-	<h3> ID number of the ship: <input id="number" type="text" oninput="calc()"> </h3>
-	
-	
+	<div class="container">
 
-	<br>
-	<br>
-	
-	
 
-	<h1> Stats: </h1>
+	<div class="segments">
+
+		<h1> <b>Data:</b> </h1>
+		
+		<h3> How many phasers: <input class="number_inputs" id="phasers" type="number" 				oninput="calc()" min="1" value="1"> </h3>
+		<h3> How many photon torpedoes: <input class="number_inputs" id="torpedo" type="number" 		oninput="calc()" min="0" value="0"> </h3>
+		<h3> How many armor units: <input class="number_inputs" id="armor" type="number" 			oninput="calc()" min="1" value="1"> </h3>
+		<h3> How many shield generators: <input class="number_inputs" id="shield_g" type="number" 		oninput="calc()" min="1" value="1"> </h3>
+		<h3> How many warp charges: <input class="number_inputs" id="warp" type="number" 			oninput="calc()" min="1" value="1"> </h3>
+	
+		<br>
+
+		<h3> Name of the ship: <input class="text_inputs" id="name" type="text" oninput="calc()"> 		</h3>
+		<h3> ID number of the ship: <input class="text_inputs" id="number" type="text" 				oninput="calc()"> </h3>
+		
+	</div>
+
+
+	<br><br>
+	
+	
+	<div class="segments">
+
+
+	<h1> <b>Stats:</b> </h1>
 	<h3 id="attack_label"> Attack power: </h1>
 	<h3 id="HP_label"> Armor units: </h1>
 	<h3 id="shield_label"> Shield power: </h1>
 	<h3 id="warp_label"> Warp charges: </h1>
+
+
+	</div>
 	
-	<br>
-	
-	<h1> Costs: </h1>
+
+	<br><br>
+
+
+	<div class="segments">
+
+
+	<h1> <b>Costs:</b> </h1>
 	<h3 id="tritanium_label"> Tritanium: </h1>
 	<h3 id="credits_label"> Credits: </h1>
 	<h3 id="special_label"> Special materials: </h1>
 
-	<br>
+
+	</div>
 	
-	<h1> Registration: </h1>
+
+	<br><br>
+
+
+	<div class="segments">
+
+
+	<h1> <b>Registration:</b> </h1>
 	<h3 id="name_label"> Name: </h1>
 	<h3 id="number_label"> ID: </h1>
 	
+	
+	</div>
+
+
+	</div>
+
+
+
 <script>
 
 	function calc() {
@@ -113,4 +216,5 @@
 
 
 </body>
+
 </html>
